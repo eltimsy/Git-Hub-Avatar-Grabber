@@ -1,7 +1,9 @@
 var fs = require('fs');
 var request = require('request');
 require('dotenv').config()
+
 var data;
+var getRepo = require("./getRepoCon-module.js");
 
 function getRepoContributors(repoOwner, repoName, cb) {
   var options = {
@@ -40,8 +42,9 @@ function downloadImageByURL (url, filePath, i) {
     });
   });
 }
-//"danielsdeleo", "Decider"
-getRepoContributors(process.argv[2], process.argv[3], (err, result) => {
+
+
+getRepo(process.argv[2], process.argv[3], (err, result) => {
   console.log("Errors:", err);
   console.log("Result:", result);
 });
