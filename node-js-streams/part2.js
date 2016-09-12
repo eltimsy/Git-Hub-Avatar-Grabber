@@ -1,10 +1,18 @@
 var request = require("request");
 
-request("http://www.google.com", function(err, response, body) {
-  if (err) {
-    throw err;
-  }
+function printGoogleHTML(callback){
+  request("http://www.google.com", function(err, response, body) {
+    if (err) {
+      throw err;
+    }
 
-  console.log(body);
+      callback(body);
 
-});
+  });
+}
+
+function printStuff(stuff){
+  console.log(stuff);
+}
+
+printGoogleHTML(printStuff);
