@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/eltimsy/git-hub-Adler/issues"
   },
-  "homepage": "https://github.com/eltimsy/git-hub-Adler#readme"
+  "homepage": "https://github.com/eltimsy/git-hub-Adler#readme",
+  "dependencies": {
+    "dotenv": "^2.0.0"
+  }
 }

@@ -11,8 +11,8 @@ function printGoogleHTML(callback){
   });
 }
 
-function printStuff(stuff){
-  console.log(stuff);
-}
+//function printStuff(stuff){
+  //console.log(stuff);
+//}
 
-printGoogleHTML(printStuff);
+printGoogleHTML(console.log);

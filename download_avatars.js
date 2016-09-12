@@ -1,9 +1,8 @@
 var fs = require('fs');
 var request = require('request');
+require('dotenv').config()
 var data;
 
-
-//eltimsy:743c3c59703b9ba89297a3ea057da068ee5da01d
 function getRepoContributors(repoOwner, repoName, cb) {
   var options = {
     url: `https://api.github.com/repos/${repoOwner}/${repoName}/contributors`,
@@ -11,7 +10,7 @@ function getRepoContributors(repoOwner, repoName, cb) {
       'User-Agent': 'request'
     },
     qs: {
-      'access_token': '743c3c59703b9ba89297a3ea057da068ee5da01d'
+      'access_token': process.env.USERTOKEN
     }
   }
 
