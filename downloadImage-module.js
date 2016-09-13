@@ -16,11 +16,11 @@ module.exports  = function downloadImageByURL (url, filePath, i) {
         if(err) {
           console.log(err);
         } else {
-          console.log("The file was saved!");
+          console.log('The file was saved!');
         };
       });
     });
   } else {
-    return console.log("Folder does not exist!");
+    return console.log('Folder does not exist!');
   }
 }

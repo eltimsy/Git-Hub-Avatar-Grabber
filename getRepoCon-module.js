@@ -1,5 +1,5 @@
 var request = require('request');
-var downloadImage = require("./downloadImage-module.js")
+var downloadImage = require('./downloadImage-module.js')
 require('dotenv').config()
 var useToken = process.env.USERTOKEN
 
@@ -23,14 +23,14 @@ if (useToken === undefined) {
         throw err;
       } else {
         if (data.message === 'Not Found') {
-          return console.log("This is not a valid repo Owner or name");
+          return console.log('This is not a valid repo Owner or name');
         } else {
           for(var i = 0; i < data.length; i++) {
             downloadImage (data[i].avatar_url, 'avatars', data[i].login);
             avatar.push(data[i].avatar_url);
           }
         }
-        cb(err, data);
+        cb(err, avatar);
       }
     })
   }

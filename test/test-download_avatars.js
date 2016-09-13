@@ -12,16 +12,16 @@ describe("Checking downloading image module", function() {
   });
 });
 
-describe("Check if number arguments is correct", function() {
+/*describe("Check if number arguments is correct", function() {
   it('should throw an error if arguments is incorrect', function() {
-    
+
   })
-})
+})*/
 
 describe("Check if Repo and owner exists", function() {
   it("should throw an error if repo or owner doesn't exist", function() {
-    var repoUser = 'aasdff'
-    var repoName = 'asdfasd'
+    var repoUser = "aasdff"
+    var repoName = "asdfasd"
     var result = test3(repoUser, repoName, (err, result) => {
       console.log("Errors:", err);
       console.log("Result:", result);
@@ -30,19 +30,9 @@ describe("Check if Repo and owner exists", function() {
 
   })
 })
-/*  it("should return true if a number is part of Luhn Algorithm", function() {
-    var number = 4941151854614372;
-    assert.isTrue(test.testLuhn(number));
-  });
 
-it("should give a message if a value isn't a number", function() {
-    var phrase = "a man a plan a canal panama";
-    var result = test.testLuhn(phrase);
-    assert.equal(result,"Not a number!");
-  });
+/*describe("Check if dotenv file exists", function() {
+  it("should throw an error if folder doesn't exist", function() {
 
-  it("should return true if a string number is part of Luhn Algorithm", function() {
-    var stringnumber = "4748189605577626"
-    assert.isTrue(test.testLuhn(stringnumber));
   });
-});*/
+})*/
